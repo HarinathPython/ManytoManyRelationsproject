@@ -1,0 +1,24 @@
+<html>
+<body>
+<table align="center" border="2">
+    <tr>
+        <th>Student IDNO</th>
+        <th>Student Name</th>
+        <th>Student Contact No</th>
+        <th>Student Subjects</th>
+    </tr>
+    {% for x in data %}
+        <tr>
+        <th>{{ x.student_no }}</th>
+        <th>{{ x.student_name }}</th>
+        <th>{{ x.contact_no }}</th>
+        <th>
+            {% for y in x.course.all %}
+                <h3 style="color:blue">{{ y.course_name }}</h3>
+                {% endfor %}
+        </th>
+        </tr>
+    {% endfor %}
+</table>
+</body>
+</html>

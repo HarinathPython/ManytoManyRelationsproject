@@ -1,0 +1,17 @@
+
+<html>
+<body>
+<table align="center" border="2">
+    <tr>
+        <th width="100">Course ID</th>
+        <th width="200">Course Name</th>
+    </tr>
+    {% for x in data %}
+    <tr>
+        <th>{{ x.course_no }}</th>
+        <th>{{ x.course_name }}</th>
+    </tr>
+    {% endfor %}
+</table>
+</body>
+</html>
